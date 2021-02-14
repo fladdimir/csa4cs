@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_11kbpfg" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="8.2.0">
+  <bpmn:process id="Process_0dwzmsa" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_0kh2np0" name="Source">
+      <bpmn:outgoing>Flow_1rcicll</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_1not299" name="Delay">
+      <bpmn:incoming>Flow_1rcicll</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ptx1xo</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1rcicll" sourceRef="StartEvent_0kh2np0" targetRef="Activity_1not299" />
+    <bpmn:endEvent id="Event_1xf814e" name="Sink">
+      <bpmn:incoming>Flow_0ptx1xo</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0ptx1xo" sourceRef="Activity_1not299" targetRef="Event_1xf814e" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0dwzmsa">
+      <bpmndi:BPMNEdge id="Flow_1rcicll_di" bpmnElement="Flow_1rcicll">
+        <di:waypoint x="174" y="168" />
+        <di:waypoint x="174" y="220" />
+        <di:waypoint x="220" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ptx1xo_di" bpmnElement="Flow_0ptx1xo">
+        <di:waypoint x="320" y="220" />
+        <di:waypoint x="362" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Activity_1not299_di" bpmnElement="Activity_1not299">
+        <dc:Bounds x="220" y="180" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1xf814e_di" bpmnElement="Event_1xf814e">
+        <dc:Bounds x="362" y="202" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="369" y="245" width="22" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_0kh2np0">
+        <dc:Bounds x="156" y="132" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="157" y="102" width="35" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
